@@ -1,0 +1,106 @@
+/* Category Select */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.selectCat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1000px;
+  min-height: 1000px;
+  /*border: 1px solid white; */
+}
+
+.container2{
+  margin-top: 15em;
+  /*border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0 2em 0;
+}
+
+.container3{
+  height: 90%;
+  width: 30%;
+}
+
+
+
+#categories{
+  margin: 0 0.5em 1em 0;
+  background-color: whitesmoke;
+  width: 50%;
+  padding: 10px 5px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#play{
+  width: 30%;
+  padding: 12px 5px;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #277BC0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#addWords{
+  padding: 10px 5px;
+  width: 85%;
+  font-size: 1.5em;
+  background-color: #FF1E00;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.title{
+  font-family: 'Roboto', sans-serif;
+  font-size: 10em;
+  font-weight: 700;
+}
+
+.about{
+  color: white;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.french1{
+  color: #277BC0;
+}
+
+.french2{
+  color: #FFFFFF;
+}
+
+.french3{
+  color: #FF1E00;
+}
+
+.instructions{
+  color: white;
+  font-size: 2.2em;
+  font-weight: 600;
+  width: 40%;
+  height:80%;
+  margin-right: 2em;
+  text-align: left;
+}
+
+#credit{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  margin-top: 3em;
+}
+
+#credit a{
+  text-decoration: none;
+  color: white;
+}

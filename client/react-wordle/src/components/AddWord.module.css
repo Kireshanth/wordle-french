@@ -1,0 +1,51 @@
+.title{
+    font-size: 1.5em;
+    color: #277BC0;
+    border-bottom: none;
+    font-weight: 600;
+    border-bottom: 1px solid #277BC0;
+
+}
+
+.create {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2em;
+    background-color: white;
+  }
+  
+.create label {
+    text-align: left;
+    display: block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #277BC0;
+}
+  
+.create input, .create select {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.8em;
+ }
+  
+.create button {
+    background: #277BC0;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+}
