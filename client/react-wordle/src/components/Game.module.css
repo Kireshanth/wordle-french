@@ -197,6 +197,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 .modal p {
