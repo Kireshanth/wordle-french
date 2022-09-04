@@ -2,18 +2,30 @@ import Game from "./components/Game";
 import Category from "./components/Category"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AddWord from "./components/AddWord";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './index.css'
 
 
 function App() {
   const [category, setCategory] = useState("colours");
+  const [wordList, setWordList] = useState([]);
+
+  useEffect(()=>{
+    fetch("http://localhost:5000/")
+    .then(res => res.json())
+    .then(data => {
+      //random word is selected
+      console.log(data);
+      setWordList(data);
+    })
+  }, [])
+
   return (
     <Router>
       <Routes>
         <Route path="/" exact element={<Category setCategory={word => setCategory(word)}/>} />
         <Route path="/add" element={<AddWord />} />
-        <Route path="/play" element={<Game category={category} />} />
+        <Route path="/play" element={<Game category={category} words={wordList}/>} />
       </Routes>
     </Router>
   );

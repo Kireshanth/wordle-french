@@ -2,54 +2,48 @@ import { useEffect, useState } from "react";
 import Wordle from "./Wordle";
 import styles from './Game.module.css';
 
-function Game({ category }) {
+function Game({ category, words }) {
   const [solution, setSolution] = useState(null);
   const [imgURL, setImgUrl] = useState(null);
+  const [newGame, setNewGame] = useState(false);
+
+  let filterWords = words.filter(word=>word['category'] === category)
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
-    .then(res => res.json())
-    .then(data => {
-      //random word is selected
-      console.log(category);
-      console.log(data);
-      let filterWords = data.filter(word=>word['category'] === category)
-      console.log(filterWords)
       let randomSolution = filterWords[Math.floor(Math.random() * filterWords.length)];
-      console.log(randomSolution);
       setSolution(randomSolution);
-    })
-  }, [])
+  }, [newGame])
 
-    const loadImage = () =>{
-      console.log(solution['english']);
-      fetch(`https://api.pexels.com/v1/search?query=${solution['english']}&per_page=1`, {
-        headers: {
-          Authorization: "563492ad6f91700001000001bd3bc827d8e24fbeb901f5aacd19cac0"
-        }
-      })
-      .then(res=> {
-        return res.json()
-      })
-      .then(data=>{
-        setImgUrl(data.photos[0]['src']['original']);
-        console.log(imgURL);
-      })
-    }
-
+  useEffect(()=> {
     if(solution){
-      loadImage();
+      imageSearch();
+    } 
+  }, [solution])
+
+
+  const imageSearch = () => {
+  fetch(`https://api.pexels.com/v1/search?query=${solution['english']}&per_page=1`, {
+    headers: {
+      Authorization: "563492ad6f91700001000001bd3bc827d8e24fbeb901f5aacd19cac0"
     }
+  })
+  .then(res=> res.json())
+  .then(data=>{
+    setImgUrl(data.photos[0]['src']['original']);
+    console.log(imgURL);
+  })
+}
 
   return (
     <div className={styles.App}>
+      {newGame && <p style={{color: "white"}}>Game On</p>}
       <h1><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span></h1>
       {/* Will check if solution is not null before printing it out */}
       <div className={styles.layout}>
         <div className={styles.layout3}>
         {imgURL && <img src={imgURL} className={styles.image}/>}
         </div>
-        {imgURL && solution && <Wordle solution={solution['french']} />}
+        {imgURL && solution && <Wordle solution={solution['french']} setNewGame={setNewGame}/>}
       </div>
     </div>
   );

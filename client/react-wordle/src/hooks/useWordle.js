@@ -115,7 +115,7 @@ const useWordle = (solution) => {
         }
     }
 
-    return {turn, currentGuess, guesses, isCorrect, handleKeyup, usedKeys}
+    return {turn, setTurn, setCurrentGuess, currentGuess, setGuesses, guesses, setHistory, setIsCorrect, setUsedKeys, isCorrect, handleKeyup, usedKeys}
 }
 
 export default useWordle

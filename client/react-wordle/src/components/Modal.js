@@ -3,11 +3,22 @@ import Button from 'react-bootstrap/esm/Button';
 import styles from './Game.module.css';
 import { useNavigate } from "react-router-dom";
 
-export default function Modal({ isCorrect, turn, solution }){
+export default function Modal({ isCorrect, turn, setShowModal, solution, setNewGame, setTurn, setCurrentGuess, setGuesses, setHistory, setIsCorrect, setUsedKeys}){
     const history = useNavigate();
 
     const handleClick = () =>{
-        history("/");
+        setShowModal(()=>{
+            return false;
+        })
+        setTurn(0)
+        setCurrentGuess('')
+        setGuesses([...Array(6)])
+        setHistory([])
+        setIsCorrect(false)
+        setUsedKeys({})
+        setNewGame((prev)=>{
+            return !prev
+        })
     }
     return(
         <div className={styles.modal}>
