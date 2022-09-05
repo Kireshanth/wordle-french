@@ -6,16 +6,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  width: 1000px;
-  min-height: 1000px;
-  /*border: 1px solid white; */
+  justify-content: center;
+  min-width: 330px;
+  width: 80%;
+  height: 50%;
+  margin: 0px auto;
+  font-family: 'Roboto', sans-serif; 
 }
 
 .container2{
-  margin-top: 15em;
-  /*border: 1px solid white; */
+  margin-top: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2em 0 2em 0;
@@ -23,50 +25,55 @@
 
 .container3{
   height: 90%;
-  width: 30%;
+  width: 70%;
 }
-
-
 
 #categories{
   margin: 0 0.5em 1em 0;
   background-color: whitesmoke;
   width: 50%;
+  max-width: 150px;
   padding: 10px 5px;
   font-size: 1.5em;
   border-radius: 5px;
-  font-weight: 600;
+  border: none;
+  font-weight: 500;
   cursor: pointer;
 }
 #play{
   width: 30%;
+  min-width: 60px;
+  max-width: 90px;
   padding: 12px 5px;
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #277BC0;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 #addWords{
   padding: 10px 5px;
   width: 85%;
+  max-width: 250px;
   font-size: 1.5em;
   background-color: #FF1E00;
   border-radius: 5px;
-  font-weight: 600;
+  border: none;
+  font-weight: 500;
   cursor: pointer;
 }
 
 
 .title{
   font-family: 'Roboto', sans-serif;
-  font-size: 10em;
+  font-size: 4em;
   font-weight: 700;
 }
 
 .about{
   color: white;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 300;
 }
 
@@ -80,27 +87,50 @@
 
 .french3{
   color: #FF1E00;
+  margin-right: 10px;
+}
+
+.french4{
+  font-size: 1em;
 }
 
 .instructions{
   color: white;
-  font-size: 2.2em;
-  font-weight: 600;
-  width: 40%;
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 80%;
+  max-width: 700px;
   height:80%;
-  margin-right: 2em;
   text-align: left;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 #credit{
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
   color: white;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 #credit a{
   text-decoration: none;
   color: white;
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .title{
+    font-size: 6em;
+  }
+  .instructions{
+    font-size: 1.4em;
+  }
+  .about{
+    font-size: 1.2em;
+  }
+  #credit{
+    font-size: 1.2em;
+  }
 }

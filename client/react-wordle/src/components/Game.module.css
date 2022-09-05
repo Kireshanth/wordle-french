@@ -2,10 +2,9 @@
 
 
 h1 {
-  font-size: 5em;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  margin: 0 0 30px 0;
+  font-size: 3em;
+  padding: 5px 0;
+  margin-top: 0.25em;
 }
 
 .french1{
@@ -18,14 +17,23 @@ h1 {
 
 .french3{
   color: #FF1E00;
+  margin-right: 10px;
+}
+
+.french4{
+  font-size: 1em;
 }
 
 
 .image{
-  width: 500px;
-  height: 500px;
-  border: 5px solid white;
-  border-radius: 15px;
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.layout2{
+  width: 100%;
+  margin: 0 auto;
 }
 
 
@@ -33,16 +41,13 @@ h1 {
   display:flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  height: 70%;
 }
 
 .layout3{
-  margin-right: 2em;
-  height: 780px;
-  width: 50%;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 0.5em;
+  width: 80%;
 }
 
 
@@ -55,12 +60,13 @@ h1 {
 
 .row > div{
   display: block;
-  width: 80px;
-  height: 80px;
-  border: 1px solid #bbb;
+  flex-grow: 1;
+  max-width: 60px;
+  height: 50px;
+  border: 1.75px solid #565758;
   margin: 4px;
   text-align: center;
-  line-height: 80px;
+  line-height: 50px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.5em;
@@ -68,18 +74,18 @@ h1 {
 }
 
 .row > div.green {
-  --background: #5ac85a;
-  --border-color: #5ac85a;
+  --background: #538d4e;
+  --border-color: #538d4e;
   animation: flip 0.5s ease forwards;
 }
 .row > div.grey {
-  --background: #a1a1a1;
-  --border-color: #a1a1a1;
+  --background: #3a3a3c;
+  --border-color: #3a3a3c;
   animation: flip 0.5s ease forwards;
 }
 .row > div.yellow {
-  --background: #e2cc68;
-  --border-color: #e2cc68;
+  --background: #b59f3b;
+  --border-color: #b59f3b;
   animation: flip 0.5s ease forwards;
 }
 
@@ -142,33 +148,36 @@ h1 {
 }
 
 .keypad{
-  max-width: 600px;
-  margin: 20px auto;
+  width: 100%;
+  max-height: 200px;
+  max-width: 484px;
+  margin: 10px auto;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .keypad > div {
   margin: 5px;
-  width: 50px;
-  height: 60px;
-  background: #eee;
+  width: 32px;
+  height: 58px;
+  background-color:  #818384;
   display: inline-block;
   border-radius: 6px;
-  line-height: 60px;
+  line-height: 58px;
 }
 
 .keypad > div.green{
-  background: #5ac85a;
+  background: #538d4e;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 .keypad > div.yellow{
-  background: #e2cc68;
+  background: #b59f3b;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 .keypad > div.grey{
-  background: #a1a1a1;
+  background: #3a3a3c;
   color: #fff;
   transition: all 0.3s ease-in;
 }
@@ -180,6 +189,12 @@ h1 {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.modal h1{
+  border-bottom: 5px solid black;
+  padding-bottom: 2px;
+  margin-bottom: 0.25em;
 }
 
 .modal div {
@@ -196,11 +211,12 @@ h1 {
   font-size: 1.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 10px;
   text-decoration: none;
+  margin-top: 5em;
 }
 
 .modal p {
+  margin-top: 0.25em;
   font-size: 1.4em;
 }
 
@@ -215,13 +231,27 @@ h1 {
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   margin-top: 0.5em;
   font-size: 1.7em;
   font-weight: 600;
 }
 
+.play{
+  background-color: #538d4e;
+}
+
 .newcat{
   margin-left: 1em;
+}
+
+@media only screen and (min-width: 1025px) {
+  h1{
+    font-size: 4em;
+  }
+  .image{
+    max-width: 300px;
+    max-height: 300px;
+  }
 }

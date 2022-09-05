@@ -35,9 +35,8 @@ function Game({ category, words }) {
 }
 
   return (
-    <div className={styles.App}>
-      {newGame && <p style={{color: "white"}}>Game On</p>}
-      <h1><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span></h1>
+    <div className={styles.layout2}>
+      <h1><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span><span className={styles.french4} >🥐</span></h1>
       {/* Will check if solution is not null before printing it out */}
       <div className={styles.layout}>
         <div className={styles.layout3}>

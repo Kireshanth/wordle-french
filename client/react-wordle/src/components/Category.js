@@ -20,11 +20,11 @@ const Category = ({ setCategory }) => {
     return ( 
         <div className={styles.selectCat}>
             <div className={styles.container1}>
-                    <h2 className={styles.title}><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span><span style={{fontSize : 150}} >🥖</span></h2>
+                    <h2 className={styles.title}><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span><span className={styles.french4} >🥖</span></h2>
                     <p className={styles.about}>A better way to learn French Vocab</p>
             </div>
             <div className={styles.container2}>
-                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french1}>Play</span> or click <span className={styles.french3}>Add New Words</span> to list.</p>
+                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french1}>Play</span> or click <span className={styles.french3}>Add New Words</span>to list.</p>
                 <div className={styles.container3}>
                     <form onSubmit={handleSubmit}>
                     <select value={theme} onChange={(e)=>setTheme(e.target.value)} name="categories" id={styles.categories} required>
