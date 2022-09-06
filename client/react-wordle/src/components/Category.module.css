@@ -52,16 +52,25 @@
   border: none;
   cursor: pointer;
 }
-#addWords{
+
+.btn{
   padding: 10px 5px;
   width: 85%;
   max-width: 250px;
   font-size: 1.5em;
-  background-color: #FF1E00;
   border-radius: 5px;
   border: none;
   font-weight: 500;
   cursor: pointer;
+}
+
+.addWords{
+  background-color: #538d4e;
+}
+
+.deleteWords{
+  margin-top: 1em;
+  background-color: #FF1E00;
 }
 
 

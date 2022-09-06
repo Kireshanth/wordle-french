@@ -18,5 +18,13 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+    },
+    deleteWord: async (req, res)=>{
+        try{
+            await Words.findOneAndDelete({english: req.body.english, category: req.body.category})
+            console.log('word has been deleted!')
+        }catch(err){
+            console.log(err)
+        }
     }
 }

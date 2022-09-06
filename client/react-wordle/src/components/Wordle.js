@@ -11,7 +11,7 @@ export default function Wordle({ solution, setNewGame }){
     const { currentGuess , handleKeyup, guesses, isCorrect, turn, usedKeys, setTurn, setCurrentGuess, setGuesses, setHistory, setIsCorrect, setUsedKeys} = useWordle(solution) //exporting values from useWordle hook
     const [showModal, setShowModal] = useState(false);
     function timer(){
-        setTimeout(()=>setShowModal(true), 1000)
+        setTimeout(()=>setShowModal(true), 2000)
     }
     useEffect(()=>{
         window.addEventListener('keyup', handleKeyup)

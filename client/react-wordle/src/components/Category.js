@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import styles from './Category.module.css';
 
-const Category = ({ setCategory }) => {
+const Category = ({ categoryList, setCategory }) => {
     const [theme, setTheme] = useState('colours');
     const history = useNavigate();
 
@@ -13,8 +13,12 @@ const Category = ({ setCategory }) => {
             history('/play');
     }
 
-    const handleClick = () => {
+    const handleAdd = () => {
         history('/add');
+    }
+
+    const handleDelete = () => {
+        history('/delete');
     }
 
     return ( 
@@ -24,16 +28,16 @@ const Category = ({ setCategory }) => {
                     <p className={styles.about}>A better way to learn French Vocab</p>
             </div>
             <div className={styles.container2}>
-                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french1}>Play</span> or click <span className={styles.french3}>Add New Words</span>to list.</p>
+                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french1}>Play</span> to start.</p>
                 <div className={styles.container3}>
                     <form onSubmit={handleSubmit}>
                     <select value={theme} onChange={(e)=>setTheme(e.target.value)} name="categories" id={styles.categories} required>
-                    <option value="colours">colours</option>
-                    <option value="animals">animals</option>
+                    {categoryList && categoryList.map((cat, i) => <option key={i} value={cat} >{cat}</option>)}
                     </select>
                     <Button id={styles.play} type="submit" variant="primary">Play</Button>
                     </form>
-                    <Button id={styles.addWords} onClick={handleClick} variant="primary">Add New Words</Button>
+                    <Button className={`${styles.btn} ${styles.addWords}`} onClick={handleAdd} variant="primary">Add New Words</Button>
+                    <Button className={`${styles.btn} ${styles.deleteWords}`} onClick={handleDelete} variant="primary">Delete Words</Button>
                 </div>
             </div>
             <div id={styles.credit}>Built by <a target="_blank" href="https://github.com/kireshanth">Kireshanth 👨🏿‍💻</a></div>

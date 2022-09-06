@@ -88,6 +88,7 @@ const useWordle = (solution) => {
                 console.log("You already used that word");
                 return
             }
+            
             //check if word is 5 chars long
             if(currentGuess.length < guessLength){
                 console.log("Guess must match solution length");

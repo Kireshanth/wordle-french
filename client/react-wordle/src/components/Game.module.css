@@ -251,7 +251,7 @@ h1 {
     font-size: 4em;
   }
   .image{
-    width: 250px;
+    max-width: 250px;
     height: 250px;
   }
 }

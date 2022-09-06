@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.title{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.5em;
+    padding-bottom: 0px;
+}
+.create {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #565758;
+    font-family: 'Roboto', sans-serif;
+    color: #538d4e;
+    border-radius: 10px solid black;
+    padding: 1em;
+  }
+  
+.create label {
+    text-align: left;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+}
+  
+.create input, .create select {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1em;
+ }
+  
+.create button {
+    background: #538d4e;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 1025px) {
+    .title{
+      font-size: 2.5em;
+    }
+
+    .create label{
+      font-size: 1.5em;
+    }
+
+    .create button {
+        padding: 13px;
+        font-size: 1.5em;
+    }
+
+    .create input, .create select {
+        font-size: 1.1em;
+     }
+  }

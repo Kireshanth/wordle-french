@@ -4,11 +4,13 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AddWord from "./components/AddWord";
 import { useEffect, useState } from "react";
 import './index.css'
+import DeleteWord from "./components/DeleteWord";
 
 
 function App() {
   const [category, setCategory] = useState("colours");
   const [wordList, setWordList] = useState([]);
+  const [categoryList, setCategoryList] = useState([]);
 
   useEffect(()=>{
     fetch("http://localhost:5000/")
@@ -16,15 +18,30 @@ function App() {
     .then(data => {
       //random word is selected
       console.log(data);
-      setWordList(data);
+      setWordList(data)
     })
   }, [])
+    
+  useEffect(()=>{
+    if(wordList){
+    setCategoryList(()=>{
+      let catList = [];
+      wordList.forEach(word=>{
+        if(!(catList.includes(word['category']))){
+          catList.push(word['category']);
+        }
+      })
+      console.log(catList);
+      return catList; 
+    })}
+  }, [wordList])
 
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Category setCategory={word => setCategory(word)}/>} />
-        <Route path="/add" element={<AddWord />} />
+        <Route path="/" exact element={<Category categoryList={categoryList} setCategory={word => setCategory(word)}/>} />
+        <Route path="/add" element={<AddWord categoryList={categoryList}/>} />
+        <Route path="/delete" element={<DeleteWord categoryList={categoryList}/>} />
         <Route path="/play" element={<Game category={category} words={wordList}/>} />
       </Routes>
     </Router>
