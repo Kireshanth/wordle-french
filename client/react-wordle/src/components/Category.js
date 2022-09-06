@@ -24,7 +24,7 @@ const Category = ({ categoryList, setCategory }) => {
     return ( 
         <div className={styles.selectCat}>
             <div className={styles.container1}>
-                    <h2 className={styles.title}><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span><span className={styles.french4} >🥖</span></h2>
+                    <div className={styles.title}><span className={styles.french1}>WO</span><span className={styles.french2}>RD</span><span className={styles.french3}>LÉ</span><span className={styles.french4} >🥖</span></div>
                     <p className={styles.about}>A better way to learn French Vocab</p>
             </div>
             <div className={styles.container2}>
