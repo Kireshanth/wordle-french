@@ -28,7 +28,7 @@ const Category = ({ categoryList, setCategory }) => {
                     <p className={styles.about}>A better way to learn French Vocab</p>
             </div>
             <div className={styles.container2}>
-                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french1}>Play</span> to start.</p>
+                <p class={styles.instructions}>Bonjour! Choose a word category and click <span className={styles.french4}>Play</span> to start.</p>
                 <div className={styles.container3}>
                     <form onSubmit={handleSubmit}>
                     <select value={theme} onChange={(e)=>setTheme(e.target.value)} name="categories" id={styles.categories} required>

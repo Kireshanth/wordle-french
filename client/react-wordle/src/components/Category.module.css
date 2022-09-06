@@ -50,7 +50,7 @@
   max-width: 90px;
   padding: 12px 5px;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 600;
   background-color: #277BC0;
   border-radius: 5px;
   border: none;
@@ -68,13 +68,19 @@
   cursor: pointer;
 }
 
+.bth:hover{
+
+}
+
 .addWords{
   background-color: #538d4e;
+  font-weight: 600;
 }
 
 .deleteWords{
   margin-top: 1em;
   background-color: #FF1E00;
+  font-weight: 600;
 }
 
 
@@ -101,6 +107,12 @@
 .french3{
   color: #FF1E00;
   margin-right: 10px;
+}
+
+.french4{
+  color: #277BC0;
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
 }
 
 .french4{
