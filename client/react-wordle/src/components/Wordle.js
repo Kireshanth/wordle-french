@@ -33,7 +33,6 @@ export default function Wordle({ solution, setNewGame }){
     return(
         <>
         <div className={styles.layout2}>
-            <p style={{color: "white"}}>{solution}</p>
             <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} guessLength={solution}/>
             <Keypad usedKeys={usedKeys}/>
         </div>
