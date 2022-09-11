@@ -1,5 +1,16 @@
 # Wordlé - French Vocab Memorization Game
 
+## Table of Contents
+**[What is Wordlé](#what-is-wordlé)**<br>
+**[How to Play](#how-to-play)**<br>
+**[Getting Started](#getting-started)**<br>
+**[Nerd Stuff](#nerd-stuff)**<br>
+**[Future Improvements](#future-improvements)**<br>
+
+
+
+
+
 ## What is Wordlé?
 My sister is currently learning French so I built a vocab memorization game to help her. The game is essentially a modified version of wordle where the user can generate a game with a solution from a specific category that they select (colours, animals, food etc). Like the standard wordle game, the player will have 6 attempts at guessing the correct word.
 
@@ -50,7 +61,7 @@ After clone the repo and open it in your code editor. Then navigate to the .env 
 
 Open both the server and client folders in separate terminals and run the command <code>npm start</code> while inside your server folder first. Then run <code>npm start</code> in your other terminal to launch the client side front end. If successful, you should be able to click add new words to start creating your word database then see the category on the main menu.
 
-## Nerd Stuff (MERN Stack)
+## Nerd Stuff
 
 <code>
 let wordlé = {
@@ -59,7 +70,7 @@ backend: "node/express",
 database: "mongoDB/mongoose" } </code>
 
 
-Wordlé was built following the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) architecture. The model(data) is handled using mongoose and stored on mongoDB. The views which the user will interact with are created using ReactJS. The functional programming (i.e backend) which handles the routing and controllers is written using NodeJS and Express.
+Wordlé was built using the MERN stack following [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) architecture. The model(data) is handled using mongoose and stored on mongoDB. The views which the user will interact with are created using ReactJS. The functional programming (i.e backend) which handles the routing and controllers is written using NodeJS and Express.
 
 To create the base wordle game, written in pure reactJS, I followed a [tutorial by Net Ninja](https://www.youtube.com/watch?v=ZSWl5UwhHcs&ab_channel=TheNetNinja).
 
