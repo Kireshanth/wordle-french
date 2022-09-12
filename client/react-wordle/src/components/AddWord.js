@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import styles from './AddWord.module.css'
 
-function AddWord({ categoryList }) {
+function AddWord() {
 
     const[english, setEnglish] = useState("");
     const[french, setFrench] = useState("");
     const[category, setCategory] = useState("");
+    const[deleteMessage, setdeleteMessage] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,7 +17,8 @@ function AddWord({ categoryList }) {
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(word)
         }).then(()=>{
-            console.log('word added to database!');
+            setdeleteMessage(true);
+            setTimeout(()=>{setdeleteMessage(false)}, 3000);
         })
     }
 
@@ -35,6 +37,7 @@ function AddWord({ categoryList }) {
                 {categoryList && categoryList.map((cat, i) => <option key={i} value={cat} >{cat}</option>)}
                 </select> */}
                 <button>Add word</button>
+                {deleteMessage && <div id={styles.message}>Word added to database!</div>}
                 </form>
             </div>
         </div>

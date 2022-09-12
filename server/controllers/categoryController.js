@@ -23,6 +23,7 @@ module.exports = {
         try{
             await Words.findOneAndDelete({english: req.body.english, category: req.body.category})
             console.log('word has been deleted!')
+            res.json("word has been deleted!")
         }catch(err){
             console.log(err)
         }

@@ -40,7 +40,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<Category categoryList={categoryList} setCategory={word => setCategory(word)}/>} />
-        <Route path="/add" element={<AddWord categoryList={categoryList}/>} />
+        <Route path="/add" element={<AddWord />} />
         <Route path="/delete" element={<DeleteWord categoryList={categoryList}/>} />
         <Route path="/play" element={<Game category={category} words={wordList}/>} />
       </Routes>

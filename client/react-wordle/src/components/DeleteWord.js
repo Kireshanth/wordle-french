@@ -5,6 +5,7 @@ function DeleteWord({ categoryList }) {
 
     const[english, setEnglish] = useState("");
     const[category, setCategory] = useState("");
+    const[showMessage, setShowMessage] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +16,8 @@ function DeleteWord({ categoryList }) {
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(word)
         }).then(()=>{
-            console.log('word deleted from database!');
+            setShowMessage(true);
+            setTimeout(()=>{setShowMessage(false)}, 3000);
         })
     }
 
@@ -31,6 +33,7 @@ function DeleteWord({ categoryList }) {
                     {categoryList && categoryList.map((cat, i) => <option key={i} value={cat} >{cat}</option>)}
                 </select>
                 <button>Delete Word</button>
+                {showMessage && <div id={styles.message}>Deleted the word from the database</div>}
                 </form>
             </div>
         </div>

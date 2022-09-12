@@ -52,6 +52,13 @@
     font-weight: 600;
 }
 
+#message{
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+}
+
 @media only screen and (min-width: 1025px) {
     .title{
       font-size: 2.5em;
@@ -69,4 +76,5 @@
     .create input, .create select {
         font-size: 1.1em;
      }
+
   }
