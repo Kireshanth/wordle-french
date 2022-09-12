@@ -2,6 +2,7 @@
 
 ## Table of Contents
 **[What is Wordlé](#what-is-wordlé)**<br>
+**[Application Demo](#application-demo)**<br>
 **[How to Play](#how-to-play)**<br>
 **[Getting Started](#getting-started)**<br>
 **[Nerd Stuff](#nerd-stuff)**<br>
@@ -13,6 +14,10 @@
 
 ## What is Wordlé?
 My sister is currently learning French so I built a vocab memorization game to help her. The game is essentially a modified version of wordle where the user can generate a game with a solution from a specific category that they select (colours, animals, food etc). Like the standard wordle game, the player will have 6 attempts at guessing the correct word.
+
+## Application Demo
+Check out a demo on [youtube](https://youtu.be/pTHttqYmZoU)
+
 
 ## How to Play?
 <p align="middle">
