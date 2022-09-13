@@ -1,5 +1,9 @@
 # Wordlé - French Vocab Memorization Game
 
+<p align="middle">
+<img src="https://github.com/Kireshanth/wordle-french/blob/main/images/wordleGame.png" width="853" height="440">
+</p>
+
 ## Table of Contents
 **[What is Wordlé](#what-is-wordlé)**<br>
 **[Application Demo](#application-demo)**<br>
