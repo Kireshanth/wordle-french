@@ -81,8 +81,6 @@ database: "mongoDB/mongoose" } </code>
 
 Wordlé was built using the MERN stack following [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) architecture. The model(data) is handled using mongoose and stored on mongoDB. The views which the user will interact with are created using ReactJS. The functional programming (i.e backend) which handles the routing and controllers is written using NodeJS and Express.
 
-To create the base wordle game, written in pure reactJS, I followed a [tutorial by Net Ninja](https://www.youtube.com/watch?v=ZSWl5UwhHcs&ab_channel=TheNetNinja).
-
 ## Future Improvements
 
 - [ ] Add user authentication (google) using PassportJS
